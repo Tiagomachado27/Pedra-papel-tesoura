@@ -8,83 +8,58 @@ repeat = ""
 print(" ")
 print(" ")
 
+def running():
 
-player1 = getpass.getpass('Jogador 1 - Pedra, Papel, Tesura: ')
-player2 = getpass.getpass('Jogador 2 - Pedra, Papel, Tesura: ')
-
-print(" ")
-
-result = input("'Enter' para saber os resultados!")
-
-print(" ")
-
-
-if player1 == "papel" and player2 == "pedra":
-    print("Papel > Pedra\r\n***VITÓRIA DO JOGADOR 1***")
-
-elif player1 == "pedra" and player2 == "papel":
-    print("Pedra < Papel\r\n***VITÓRIA DO JOGADOR 2***")
-
-elif player1 == "tesoura" and player2 == "pedra":
-    print("Tesoura < Pedra\r\n***VITÓRIA DO JOGADOR 2***")
-
-elif player1 == "pedra" and player2 == "tesoura":
-    print("Pedra > Tesoura\r\n***VITÓRIA DO JOGADOR 1***")
-
-elif player1 == "tesoura" and player2 == "papel":
-    print("Tesoura > Papel\r\n***VITÓRIA DO JOGADOR 1***")
-
-elif player1 == "papel" and player2 == "tesoura":
-    print("Papel < Tesoura\r\n***VITÓRIA DO JOGADOR 2***")
-
-elif player1 == player2:
+    player1 = getpass.getpass('Jogador 1 - Pedra, Papel, Tesura: ')
+    player2 = getpass.getpass('Jogador 2 - Pedra, Papel, Tesura: ')
     print(" ")
-    print("Empate! \r\nTente outra vez!")
+    result = input("'Enter' para saber os resultados!")
+    print(" ")
 
-else:
-    print("Erro! \r\n Por favor escreve pedra, papel, ou tesoura")
 
+    if player1 == "papel" and player2 == "pedra":
+        print("Papel > Pedra\r\n***VITÓRIA DO JOGADOR 1***")
+
+    elif player1 == "pedra" and player2 == "papel":
+        print("Pedra < Papel\r\n***VITÓRIA DO JOGADOR 2***")
+
+    elif player1 == "tesoura" and player2 == "pedra":
+        print("Tesoura < Pedra\r\n***VITÓRIA DO JOGADOR 2***")
+
+    elif player1 == "pedra" and player2 == "tesoura":
+        print("Pedra > Tesoura\r\n***VITÓRIA DO JOGADOR 1***")
+
+    elif player1 == "tesoura" and player2 == "papel":
+        print("Tesoura > Papel\r\n***VITÓRIA DO JOGADOR 1***")
+
+    elif player1 == "papel" and player2 == "tesoura":
+        print("Papel < Tesoura\r\n***VITÓRIA DO JOGADOR 2***")
+
+    elif player1 == player2:
+        print(" ")
+        print("Empate! \r\nTente outra vez!")
+
+    else:
+        print("Erro! \r\n Por favor escreve pedra, papel, ou tesoura")
+
+running()
 
 while keep_going:
-
     print(" ")
-    
-    repeat = input("Desejam jogar de novo?\r\nPressiona 's' para jogar de novo ou 'Enter' para terminar: ")
+    repeat = input("Deseja jogar de novo?\r\nPressione 's' para jogar de novo ou 'Enter' para terminar: ")
 
     if repeat == "s":
         print(" ")
-        player1 = getpass.getpass('Jogador 1 - Pedra, Papel, Tesura: ')
-        player2 = getpass.getpass('Jogador 2 - Pedra, Papel, Tesura: ')
-
-        if player1 == "papel" and player2 == "pedra":
-            print("Papel > Pedra\r\n***VITÓRIA DO JOGADOR 1***")
-
-        elif player1 == "pedra" and player2 == "papel":
-            print("Pedra < Papel\r\n***VITÓRIA DO JOGADOR 2***")
-
-        elif player1 == "tesoura" and player2 == "pedra":
-            print("Tesoura < Pedra\r\n***VITÓRIA DO JOGADOR 2***")
-
-        elif player1 == "pedra" and player2 == "tesoura":
-            print("Pedra > Tesoura\r\n***VITÓRIA DO JOGADOR 1***")
-
-        elif player1 == "tesoura" and player2 == "papel":
-            print("Tesoura > Papel\r\n***VITÓRIA DO JOGADOR 1***")
-
-        elif player1 == "papel" and player2 == "tesoura":
-            print("Papel < Tesoura\r\n***VITÓRIA DO JOGADOR 2***")
-
-        elif player1 == player2:
-            print("Empate! \r\nTente outra vez!")
-
-        else:
-            print("Erro! \r\nPor favor escreve pedra, papel, ou tesoura")
+        running()
 
     else:
         keep_going = False
         print(" ")
         print("Obrigado por jogarem!")
         input("")
+
+
+
 
 
 
